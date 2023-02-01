@@ -13,11 +13,8 @@
     function(error) { console.error("Problem z ładowaniem API", error); });
   }
   function execute() {
-
     return gapi.client.youtube.playlistItems.list({
-      "part":[
-        "snippet"
-    ],
+      "part":["snippet"],
       "maxResults": 50,
       "playlistId":"PL99ceh-K04B-uunrUjLDR3pOgK81IOjpX"
     })
