@@ -22,4 +22,4 @@ function client() {
   }
   gapi.load("client"); // Wczytywanie klienta
 
-  // ID do testu: PL99ceh-K04B-uunrUjLDR3pOgK81IOjpX
+  // ID do testu: PL99ceh-K04B-uunrUjLDR3pOgK81IOjpX 
