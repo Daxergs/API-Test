@@ -13,12 +13,13 @@ function client() {
       "maxResults": amount,
       "playlistId":id})
 /* ----------------------------------------------- */
-    .then(function(response) { // Pobieranie odpowiedzi serwera
-      for(let i=0;i<amount;i++)
-      {
-        document.write(response.result.items[i].snippet.title,'<br>');
-      }  
-    },
+  .then(function(response) // Pobieranie odpowiedzi serwera
+  { 
+    for(let i=0;i<amount;i++)
+    {
+      document.write(response.result.items[i].snippet.title,'<br>');
+    }  
+  },
     function(error) {console.error("Problem z  dzialaniem skryptu ",error);});
   }
   gapi.load("client"); // Wczytywanie klienta
