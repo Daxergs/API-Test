@@ -5,9 +5,9 @@ body
 
 button
 {
-    background-color: gainsboro;
     width: 100px;
     margin: 15px;
     height: 50px;
     border-radius: 10px;
 }
+

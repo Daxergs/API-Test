@@ -10,8 +10,8 @@ function client() {
     return gapi.client.youtube.playlistItems.list({
       "part":["snippet"],
       "maxResults": amount,
-      "playlistId":id
-    })
+      "playlistId":id})
+    
     .then(function(response) { // Pobieranie odpowiedzi serwera
       for(let i=0;i<amount;i++)
       {
