@@ -4,6 +4,7 @@ function client() {
     .then(function() {console.log("Połączono z API");}, // Sukces
     function(error) {console.error("Problem z ładowaniem API", error);}); // Błąd
   }
+/* ----------------------------------------------- */
   function execute() { // Wykonywawnie funkcji wyświetlania
     let id = prompt("Podaj ID playlisty, aby wyświetlić jej elementy");
     let amount = prompt("Podaj ilość utworów do wyświetlenia");
@@ -11,7 +12,7 @@ function client() {
       "part":["snippet"],
       "maxResults": amount,
       "playlistId":id})
-    
+/* ----------------------------------------------- */
     .then(function(response) { // Pobieranie odpowiedzi serwera
       for(let i=0;i<amount;i++)
       {
