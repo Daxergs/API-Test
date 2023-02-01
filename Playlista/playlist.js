@@ -4,8 +4,8 @@ function client() {
     .then(function() {console.log("Połączono z API");}, // Sukces
     function(error) {console.error("Problem z ładowaniem API", error);}); // Błąd
   }
-/* ----------------------------------------------- */
-  function execute() { // Wykonywawnie funkcji wyświetlania
+/* -------------- --------------------------------- */
+  function execute() { // Wykonywanie funkcji wyświetlania
     let id = prompt("Podaj ID playlisty, aby wyświetlić jej elementy");
     let amount = prompt("Podaj ilość utworów do wyświetlenia");
     return gapi.client.youtube.playlistItems.list({
