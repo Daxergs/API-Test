@@ -3,33 +3,10 @@
     <meta charset="utf-8">
     <title>Test Youtube API</title>
     <script src="https://apis.google.com/js/api.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
 <body>
-<script>
-  function client() {
-    gapi.client.setApiKey("AIzaSyD0vhHyMH2_9T2L3EREwDTaxzVKkzlBe9g");
-    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-    .then(function() { console.log("Połączono z API"); },
-    function(error) { console.error("Problem z ładowaniem API", error); });
-  }
-  function execute() {
-    return gapi.client.youtube.playlistItems.list({
-      "part":["snippet"],
-      "maxResults": 50,
-      "playlistId":"PL99ceh-K04B-uunrUjLDR3pOgK81IOjpX"
-    })
-    
-    .then(function(response) {
-      for(let i=0;i<=49;i++)
-      {
-        document.write(response.result.items[i].snippet.title,'<br>');
-      }
-      
-    },
-              function(error) { console.error("Problem z  dzialaniem skryptu ", error); });
-  }
-  gapi.load("client");
-</script>
+<script src="playlist.js"></script>
 <button onclick="client()">Zaloguj się </button>
 <button onclick="execute()">Wykonaj </button>
 </body>
